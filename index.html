@@ -15,18 +15,11 @@
   header {
     background: #eefffe;
     color: #000000;
-    padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 2rem;
+    text-align: center;       /* centers text */
+    position: relative;       /* allows button positioning */
   }
-  header h1, header p {
-    margin: 0;
-    text-align: left;
-  }
-  nav {
-    margin-top: 0.5rem;
-  }
+
   nav a {
     color: #000000;
     margin: 0 10px;
@@ -35,7 +28,11 @@
   nav a:hover {
     text-decoration: underline;
   }
+
   header button {
+    position: absolute;       /* keeps button in corner */
+    right: 20px;
+    top: 20px;
     background: #9c5c5c6d;
     color: #ffffff;
     border: none;
@@ -108,16 +105,14 @@
 </head>
 <body>
   <header>
-    <div>
-      <h1>Samarth Hannure</h1>
-      <p>Coder | Entrepreneur</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
     <button onclick="toggleDarkMode()">Dark Mode 🌙</button>
+    <h1>Samarth Hannure</h1>
+    <p>Coder | Entrepreneur</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <section id="about">
