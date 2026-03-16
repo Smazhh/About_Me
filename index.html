@@ -7,17 +7,25 @@
   <style>
   body {
     font-family: Arial, sans-serif;
-    margin:0px;
+    margin:0;
     background: #0e0e1a;
     color: #ffffff;
   }
 
-
   header {
     background: #eefffe;
     color: #000000;
-    padding: 2rem;
-    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1, header p {
+    margin: 0;
+    text-align: left;
+  }
+  nav {
+    margin-top: 0.5rem;
   }
   nav a {
     color: #000000;
@@ -27,37 +35,30 @@
   nav a:hover {
     text-decoration: underline;
   }
-header button {
-  background: #9c5c5c6d;
-  color: #ffffff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;   /* moves button to the right side of header */
-}
-
-
+  header button {
+    background: #9c5c5c6d;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
   header button:hover {
     background: #39383b;
   }
 
   /* About Section */
-  #about {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-  }
-  #about h2 {
-    color: #fefefe;
-  }
-
-  /* Projects Section */
-  #projects {
+  #about, #projects, #contact {
     padding: 2rem;
     max-width: 900px;
     margin: auto;
+    text-align: center;
   }
+  #about h2, #projects h2, #contact h2 {
+    margin-bottom: 1rem;
+  }
+
+  /* Projects Section */
   .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -85,16 +86,6 @@ header button {
     background: #005fa3;
   }
 
-  /* Contact Section */
-  #contact {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-  }
-  #contact h2 {
-    color: #0077cc;
-  }
-
   /* Footer Section */
   footer {
     background: #222;
@@ -114,23 +105,24 @@ header button {
     color: #fff;
   }
 </style>
-
 </head>
 <body>
   <header>
-    <button onclick="toggleDarkMode()">Dark Mode🌙</button>
-    <h1>Samarth Hannure</h1>
-    <p>Coder | Enterprenuer</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div>
+      <h1>Samarth Hannure</h1>
+      <p>Coder | Entrepreneur</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <button onclick="toggleDarkMode()">Dark Mode 🌙</button>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I’m Samarth, a passionate Coding who loves to solve DSA problems. I am currently in learning stage and enjoy turning ideas into reality.</p>
+    <p>Hello! I’m Samarth, a passionate coder who loves solving DSA problems. I am currently learning and enjoy turning ideas into reality.</p>
   </section>
 
   <section id="projects">
@@ -143,21 +135,20 @@ header button {
       </div>
       <div class="card">
         <h3>Startup</h3>
-        <p>Working on a kiosk startup</p>
+        <p>Working on a kiosk startup.</p>
         <button>View Project</button>
       </div>
     </div>
   </section>
 
-  
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sbhannure12@gmail.com">sbhannure12@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/samarth-hannure" target="_blank">linkedin.com/in/samarth-hannure</a></p>
+    <p>GitHub: <a href="https://github.com/smazhh" target="_blank">github.com/smazhh</a></p>
+  </section>
 
   <footer>
-    <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: sbhannure12@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/samarth-hannure</p>
-    <p>GitHub: github.com/smazhh</p>
-  </section>
     <p>&copy; 2026 Samarth Hannure. All rights reserved.</p>
   </footer>
 
