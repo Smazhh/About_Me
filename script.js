@@ -22,7 +22,7 @@ const rotatingMessages = [
 
 function initializeTheme() {
   const saved = localStorage.getItem("site-mode");
-  if (saved === "dark") {
+  if (saved !== "light") {
     document.body.classList.add("dark");
   }
 }
