@@ -1,156 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samarth's Website</title>
-  <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin:0;
-    background: #0e0e1a;
-    color: #ffffff;
-  }
-
-  header {
-    background: #eefffe;
-    color: #000000;
-    padding: 2rem;
-    text-align: center;       /* centers text */
-    position: relative;       /* allows button positioning */
-  }
-
-  nav a {
-    color: #000000;
-    margin: 0 10px;
-    text-decoration: none;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  header button {
-    position: absolute;       /* keeps button in corner */
-    right: 20px;
-    top: 20px;
-    background: #9c5c5c6d;
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  header button:hover {
-    background: #39383b;
-  }
-
-  /* About Section */
-  #about, #projects, #contact {
-    padding: 2rem;
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-  }
-  #about h2, #projects h2, #contact h2 {
-    margin-bottom: 1rem;
-  }
-
-  /* Projects Section */
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-  }
-  .card {
-    background: #000000;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-  }
-  .card:hover {
-    transform: translateY(-6px);
-  }
-  .card button {
-    background: #0077cc;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .card button:hover {
-    background: #005fa3;
-  }
-
-  /* Footer Section */
-  footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-
-  /* Dark Mode */
-  .dark-mode {
-    background: #222;
-    color: #fff;
-  }
-  .dark-mode .card {
-    background: #333;
-    color: #fff;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samarth Hannure | Portfolio</title>
+  <meta name="description" content="Portfolio website of Samarth Hannure" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <button onclick="toggleDarkMode()">Dark Mode 🌙</button>
-    <h1>Samarth Hannure</h1>
-    <p>Coder | Entrepreneur</p>
-    <nav>
+  <header class="site-header">
+    <div class="container header-content">
+      <div>
+        <h1>Samarth Hannure</h1>
+        <p class="tagline">Coder | Entrepreneur</p>
+      </div>
+      <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+    </div>
+
+    <nav class="main-nav container">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I’m Samarth, a passionate coder who loves solving DSA problems. I am currently learning and enjoy turning ideas into reality.</p>
-  </section>
+  <main>
+    <section id="about" class="section container">
+      <h2>About Me</h2>
+      <p>
+        Hello! I’m Samarth, a passionate coder who loves solving DSA problems.
+        I enjoy learning, building useful products, and turning ideas into reality.
+      </p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>A responsive portfolio showcasing my work and skills.</p>
-        <button>View Project</button>
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <h3>About_Me</h3>
+          <p>Personal portfolio website repository.</p>
+          <a class="btn" href="https://github.com/Smazhh/About_Me" target="_blank" rel="noopener noreferrer">View Repo</a>
+        </article>
       </div>
-      <div class="card">
-        <h3>Startup</h3>
-        <p>Working on a kiosk startup.</p>
-        <button>View Project</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sbhannure12@gmail.com">sbhannure12@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/samarth-hannure" target="_blank">linkedin.com/in/samarth-hannure</a></p>
-    <p>GitHub: <a href="https://github.com/smazhh" target="_blank">github.com/smazhh</a></p>
-  </section>
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>DSA</li>
+        <li>Problem Solving</li>
+      </ul>
+    </section>
 
-  <footer>
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sbhannure12@gmail.com">sbhannure12@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/samarth-hannure" target="_blank" rel="noopener noreferrer">linkedin.com/in/samarth-hannure</a></p>
+      <p>GitHub: <a href="https://github.com/Smazhh" target="_blank" rel="noopener noreferrer">github.com/Smazhh</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <p>&copy; 2026 Samarth Hannure. All rights reserved.</p>
   </footer>
 
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
