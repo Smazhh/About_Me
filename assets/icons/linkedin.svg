@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LinkedIn">
+  <rect width="64" height="64" rx="14" fill="#0A66C2"/>
+  <rect x="13" y="25" width="8" height="26" fill="#fff"/>
+  <circle cx="17" cy="17" r="5" fill="#fff"/>
+  <path d="M27 25h8v4c2-3 5-5 10-5 8 0 12 5 12 14v13h-8V39c0-5-2-8-6-8-4 0-8 3-8 9v11h-8z" fill="#fff"/>
+</svg>

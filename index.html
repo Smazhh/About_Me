@@ -1,71 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samarth Hannure | Portfolio</title>
-  <meta name="description" content="Portfolio website of Samarth Hannure" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Portfolio of Samarth Hannure: projects, skills, journey, and ways to connect.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-content">
-      <div>
-        <h1>Samarth Hannure</h1>
-        <p class="tagline">Coder | Entrepreneur</p>
-      </div>
-      <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle dark mode">🌙 Dark Mode</button>
-    </div>
+  <div class="mesh-bg" aria-hidden="true"></div>
 
-    <nav class="main-nav container">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="header">
+    <div class="container header-row">
+      <a class="logo" href="#top">Samarth Hannure</a>
+      <nav class="menu" aria-label="Site navigation">
+        <a href="#about">About</a>
+        <a href="#stack">Stack</a>
+        <a href="#work">Work</a>
+        <a href="#profiles">Profiles</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="modeToggle" class="mode-btn mode-inline" type="button" aria-label="Toggle theme">Mode</button>
+    </div>
   </header>
 
-  <main>
-    <section id="about" class="section container">
-      <h2>About Me</h2>
-      <p>
-        Hello! I’m Samarth, a passionate coder who loves solving DSA problems.
-        I enjoy learning, building useful products, and turning ideas into reality.
+  <main id="top">
+    <section class="hero container reveal">
+      <p class="hero-kicker">Code. Build. Launch.</p>
+      <h1>
+        Turning technical ideas into
+        <span class="outline">real projects</span>
+        that people can use.
+      </h1>
+      <p class="hero-text">
+        I am a developer focused on product-minded engineering, algorithmic thinking,
+        and polished user experiences. I build quickly, learn continuously, and care about outcomes,
+        especially through my kiosk software startup concept. I am currently in FY BTech at
+        MIT AOE, Alandi, Pune (admission year 2025).
       </p>
+      <div class="hero-cta">
+        <a href="#work" class="btn btn-solid">Explore Projects</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      <p class="live-indicator"><span></span><strong id="rotatingLine"></strong></p>
     </section>
 
-    <section id="projects" class="section container">
-      <h2>Projects</h2>
-      <div class="cards-grid">
-        <article class="card">
-          <h3>About_Me</h3>
-          <p>Personal portfolio website repository.</p>
-          <a class="btn" href="https://github.com/Smazhh/About_Me" target="_blank" rel="noopener noreferrer">View Repo</a>
+    <section class="metrics container reveal" aria-label="Key metrics">
+      <article>
+        <h2 id="problemsSolvedCount" data-target="50">0</h2>
+        <p>Problems solved till now</p>
+      </article>
+      <article>
+        <h2 data-target="3">0</h2>
+        <p>Mini projects built</p>
+      </article>
+      <article>
+        <h2 data-target="6">0</h2>
+        <p>Core technologies in active practice</p>
+      </article>
+      <article>
+        <h2 data-target="1" data-suffix="">0</h2>
+        <p>Startup ongoing</p>
+      </article>
+    </section>
+
+    <section id="about" class="section container reveal">
+      <div class="section-top">
+        <p class="label">About</p>
+        <h2>Developer with entrepreneurial energy</h2>
+      </div>
+      <div class="about-layout">
+        <article>
+          <h3>How I work</h3>
+          <p>I like to simplify complex ideas into actionable implementation plans and ship in iterations.</p>
+        </article>
+        <article>
+          <h3>What I value</h3>
+          <p>Clear communication, maintainable code, and products that solve real user pain points.</p>
+        </article>
+        <article>
+          <h3>Education</h3>
+          <p>FY BTech student at MIT Academy of Engineering (MIT AOE), Alandi, Pune. Admission year: 2025.</p>
         </article>
       </div>
     </section>
 
-    <section id="skills" class="section container">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>DSA</li>
-        <li>Problem Solving</li>
-      </ul>
+    <section id="stack" class="section container reveal">
+      <div class="section-top">
+        <p class="label">Stack</p>
+        <h2>Technology toolbox</h2>
+      </div>
+      <div class="stack-grid">
+        <div>
+          <p>Programming Languages</p>
+          <ul>
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <div>
+          <p>Frameworks & Libraries</p>
+          <ul>
+            <li>FastAPI</li>
+            <li>React</li>
+            <li>REST API Design</li>
+          </ul>
+        </div>
+        <div>
+          <p>Problem Solving</p>
+          <ul>
+            <li>Data Structures & Algorithms</li>
+            <li>Competitive Programming</li>
+            <li>Performance Thinking</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:sbhannure12@gmail.com">sbhannure12@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/samarth-hannure" target="_blank" rel="noopener noreferrer">linkedin.com/in/samarth-hannure</a></p>
-      <p>GitHub: <a href="https://github.com/Smazhh" target="_blank" rel="noopener noreferrer">github.com/Smazhh</a></p>
+    <section id="work" class="section container reveal">
+      <div class="section-top work-head">
+        <div>
+          <p class="label">Work</p>
+          <h2>Portfolio projects</h2>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Project category tabs">
+          <button class="tab active" type="button" data-tab="all">All</button>
+          <button class="tab" type="button" data-tab="web">Web</button>
+          <button class="tab" type="button" data-tab="logic">Logic</button>
+          <button class="tab" type="button" data-tab="startup">Startup</button>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card" data-type="web">
+          <h3>Modern Portfolio Site</h3>
+          <p>Responsive personal website with animations, filters, and themed interface.</p>
+          <div class="chips"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          <a href="https://github.com/Smazhh/About_Me" target="_blank" rel="noopener noreferrer">View Repository</a>
+        </article>
+        <article class="card" data-type="logic">
+          <h3>DSA Progress Dashboard</h3>
+          <p>Concept project tracking solved questions by topic, streak, and difficulty trend.</p>
+          <div class="chips"><span>DSA</span><span>Analytics</span><span>Planning</span></div>
+          <a href="#contact">Request Overview</a>
+        </article>
+        <article class="card" data-type="startup">
+          <h3>KioskFlow OS</h3>
+          <p>Startup concept for smart kiosk software that powers ordering, billing, inventory sync, and analytics.</p>
+          <div class="chips"><span>Startup</span><span>Kiosk</span><span>SaaS</span></div>
+          <a href="#contact">Discuss Concept</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="profiles" class="section container reveal">
+      <div class="section-top">
+        <p class="label">Profiles</p>
+        <h2>Coding profiles</h2>
+      </div>
+      <div class="profile-grid">
+        <article class="profile-card" data-platform="leetcode">
+          <div class="profile-head">
+            <img class="platform-icon-img" src="assets/icons/leetcode.svg" alt="LeetCode icon">
+            <div>
+              <h3>LeetCode</h3>
+              <a href="https://leetcode.com/u/Smazh/" target="_blank" rel="noopener noreferrer">leetcode.com/u/Smazh/</a>
+            </div>
+          </div>
+          <p class="profile-stats" id="leetcodeStats">Fetching stats...</p>
+        </article>
+
+        <article class="profile-card" data-platform="codechef">
+          <div class="profile-head">
+            <img class="platform-icon-img" src="assets/icons/codechef.png" alt="CodeChef icon">
+            <div>
+              <h3>CodeChef</h3>
+              <a href="https://www.codechef.com/users/smazh" target="_blank" rel="noopener noreferrer">codechef.com/users/smazh</a>
+            </div>
+          </div>
+          <p class="profile-stats" id="codechefStats">Fetching stats...</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="highlights" class="section container reveal">
+      <div class="section-top">
+        <p class="label">Highlights</p>
+        <h2>Journey timeline</h2>
+      </div>
+      <div class="rail">
+        <article>
+          <time>2024</time>
+          <p>Published initial projects and built consistency around daily coding habits.</p>
+        </article>
+        <article>
+          <time>2025</time>
+          <p>Started FY BTech at MIT AOE, Alandi, Pune and sharpened fundamentals in programming and problem solving.</p>
+        </article>
+        <article>
+          <time>2026</time>
+          <p>Exploring full-stack workflows and product engineering mindset for real-world outcomes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container reveal">
+      <div class="section-top">
+        <p class="label">Contact</p>
+        <h2>Ready to collaborate</h2>
+      </div>
+      <div class="contact-layout">
+        <div class="connect-list">
+          <a href="mailto:sbhannure12@gmail.com">
+            <img class="platform-icon-img" src="assets/icons/gmail.svg" alt="Gmail icon">
+            <span>sbhannure12@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/samarth-hannure" target="_blank" rel="noopener noreferrer">
+            <img class="platform-icon-img" src="assets/icons/linkedin.svg" alt="LinkedIn icon">
+            <span>linkedin.com/in/samarth-hannure</span>
+          </a>
+          <a href="https://github.com/Smazhh" target="_blank" rel="noopener noreferrer">
+            <img class="platform-icon-img" src="assets/icons/github.svg" alt="GitHub icon">
+            <span>github.com/Smazhh</span>
+          </a>
+        </div>
+        <form id="messageForm" class="message-form" novalidate>
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" required placeholder="Your full name">
+
+          <label for="emailAddress">Email Address</label>
+          <input id="emailAddress" name="emailAddress" type="email" required placeholder="you@example.com">
+
+          <label for="projectType">Project Type</label>
+          <select id="projectType" name="projectType" required>
+            <option value="">Select one</option>
+            <option value="portfolio">Portfolio Build</option>
+            <option value="webapp">Web App</option>
+            <option value="kiosk">Kiosk Software</option>
+            <option value="consultation">Consultation</option>
+          </select>
+
+          <label for="details">Project Details</label>
+          <textarea id="details" name="details" rows="5" required placeholder="Tell me what you want to build"></textarea>
+
+          <button class="btn btn-solid" type="submit">Send Request</button>
+          <p id="messageStatus" class="message-status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Samarth Hannure. All rights reserved.</p>
+  <footer class="footer container">
+    <p>&copy; 2026 Samarth Hannure. Built for impact.</p>
   </footer>
 
   <script src="script.js"></script>
